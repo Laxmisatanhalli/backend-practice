@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../app');
+const app = require("../app");
 
 
 
@@ -9,6 +9,6 @@ describe('GET /', () => {
     const res = await request(app).get('/');
 
     expect(res.statusCode).toBe(200);
-    expect(res.body).toEqual('message', 'Hello, World!');
+    expect(res.body).toEqual({ message: 'Hello, World!' });
   });
 });
